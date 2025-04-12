@@ -64,5 +64,5 @@ app.get("/:shortCode", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running at ${process.env.BASE_URL || `http://localhost:${PORT}`}`);
+    console.log(`Server running at ${process.env.BASE_URL}`);
 });
