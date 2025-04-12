@@ -11,7 +11,7 @@ shortenButton.addEventListener("click", async ()=>{
     }
 
     try{
-        const response = await fetch ("https://url-shortener-backend-gmlc.onrender.com" ,{
+        const response = await fetch ("https://url-shortener-backend-gmlc.onrender.com/shorten" ,{
             method:"POST",
             headers:{
                 "content-type" : "application/json"
