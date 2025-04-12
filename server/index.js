@@ -1,17 +1,22 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const urlModel = require("./urlModel");
 
-const mongoURI = "mongodb://amarjeetanand0987:Amar123@ac-nlwx554-shard-00-00.cvuzm0i.mongodb.net:27017,ac-nlwx554-shard-00-01.cvuzm0i.mongodb.net:27017,ac-nlwx554-shard-00-02.cvuzm0i.mongodb.net:27017/?replicaSet=atlas-4a34fr-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=URLcluster";
+
+
+const mongoURI = process.env.MONGO_URI;
+
 
 mongoose.connect(mongoURI)
   .then(() => console.log(" Connected to MongoDB Atlas"))
   .catch((err) => console.error(" MongoDB connection error:", err));
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
