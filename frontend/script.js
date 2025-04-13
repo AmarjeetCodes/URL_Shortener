@@ -24,7 +24,7 @@ shortenButton.addEventListener("click", async ()=>{
         // result.innerHTML= `<a href="${data.shortURL}" target="_blank">${data.shortURL}</a>`;
 
         const shortCode = data.shortCode;
-        const fullRedirectLink = `https://your-backend-url.onrender.com/${shortCode}`;
+        const fullRedirectLink = `https://url-shortener-backend-gmlc.onrender.com/${shortCode}`;
         result.innerHTML = `<a href="${fullRedirectLink}" target="_blank">${shortCode}</a>`;
 
     }
