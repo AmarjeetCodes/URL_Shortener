@@ -19,9 +19,14 @@ shortenButton.addEventListener("click", async ()=>{
             body:JSON.stringify({longURL})
         });
 
-        const data =await response.json();
-        console.log("shorten url recieved :" , data.shortURL);
-        result.innerHTML= `<a href="${data.shortURL}" target="_blank">${data.shortURL}</a>`;
+        // const data =await response.json();
+        // console.log("shorten url recieved :" , data.shortURL);
+        // result.innerHTML= `<a href="${data.shortURL}" target="_blank">${data.shortURL}</a>`;
+
+        const shortCode = data.shortCode;
+        const fullRedirectLink = `https://your-backend-url.onrender.com/${shortCode}`;
+        result.innerHTML = `<a href="${fullRedirectLink}" target="_blank">${shortCode}</a>`;
+
     }
     catch(error){
         console.log("error : ",error);

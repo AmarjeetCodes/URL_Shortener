@@ -35,7 +35,9 @@ app.post("/shorten", async (req, res) => {
         await newURL.save();
 
         console.log("Saved successfully:", newURL);
-        res.json({ shortURL: shortURL });
+        // res.json({ shortURL: shortURL });
+        res.json({ shortCode: shortCode });
+        
     } catch (err) {
         console.error("Error while saving:", err);
         res.status(500).json({ error: "Internal Server Error", details: err.message });
