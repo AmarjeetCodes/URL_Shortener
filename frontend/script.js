@@ -19,7 +19,7 @@ shortenButton.addEventListener("click", async ()=>{
             body:JSON.stringify({longURL})
         });
 
-        // const data =await response.json();
+        const data =await response.json();
         // console.log("shorten url recieved :" , data.shortURL);
         // result.innerHTML= `<a href="${data.shortURL}" target="_blank">${data.shortURL}</a>`;
 
