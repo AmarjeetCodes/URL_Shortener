@@ -26,7 +26,7 @@ app.post("/shorten", async (req, res) => {
     console.log("Received longURL:", longURL);
 
     const shortCode = Math.random().toString(36).substring(2, 7);
-    const shortURL = `${process.env.BASE_URL}/${shortCode}`;
+    const shortURL = `${process.env.BASE_URL}${shortCode}`;
     console.log("Generated shortURL:", shortURL);
 
     try {
